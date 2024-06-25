@@ -1,0 +1,31 @@
+<html tag="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Thyroid Disease Predictor</title>
+    </head>
+    <body>
+        <h1>Thyroid Disease Predictor</h1>
+        {% if result %}
+            <h2>{{ result }}</h2>
+        {% endif %}
+        <form method="post" action="/predict">
+            <label>T3-resin uptake test [Test Value: 65 to 144]</label><br>
+            <input type="text" name="T3-resin"><br><br>
+
+            <label>Total Serum thyroxin [Test Value: 0.5 to 25.3]</label><br>
+            <input type="text" name="thyroxin"><br><br>
+
+            <label>Total serum triiodothyronine [Test Value: 0.2 to 10]</label><br>
+            <input type="text" name="triiodothyronine"><br><br>
+
+            <label>basal thyroid-stimulating hormone (TSH) [Test Value: 0.1 to 56.4]</label><br>
+            <input type="text" name="TSH"><br><br>
+
+            <label>Maximal absolute difference of TSH [Test Value: -0.7 to 56.3]</label><br>
+            <input type="text" name="diff-TSH"><br><br>
+
+            <input type="submit" value="Predict"><br><br>
+
+        </form>
+    </body>
+</html>
